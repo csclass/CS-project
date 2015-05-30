@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 #System of linear equations solver
 class x:#for the representation of a polynomial
     def __init__(self,coefficients):
@@ -21,6 +22,14 @@ class x:#for the representation of a polynomial
         return p
 def get(): #gets user input and creates a polynomial
         pass
-#poly=x([1,2,0,5,10])
-poly=x([1,50])
-print(poly)
+def solve(l):#input needs to be a list of n class x objects
+        for i in l:# checks if everythng is of class x
+                if not isinstance(i,x):
+                        print('Equations must be polynomial objects')
+                        return None
+        print("Solving {"+str(x1)+" , "+str(x2)+"} for (x,y)...")
+        print(x2)
+x1=x([1,2,0,5,10])
+x2=x([1,50])
+#x2=5
+solve([x1,x2])
